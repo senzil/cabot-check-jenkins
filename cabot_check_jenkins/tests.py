@@ -45,7 +45,7 @@ class TestJenkinsCheckCheckPlugin(LocalTestCase):
         super(TestJenkinsCheckCheckPlugin, self).setUp()
 
         self.jenkins_check_model, created = StatusCheckPluginModel.objects.get_or_create(
-	    slug='jenkins'
+	    slug='cabot_check_jenkins'
 	    )
 
         self.jenkins_check = StatusCheck.objects.create(

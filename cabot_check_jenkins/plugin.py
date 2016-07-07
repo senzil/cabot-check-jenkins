@@ -2,7 +2,6 @@ from django.conf import settings
 from django.template import Context, Template
 from django import forms
 from cabot.plugins.models import StatusCheckPlugin
-from cabot.plugins.forms import CheckConfigForm
 from cabot.cabotapp.models import StatusCheckResult
 from os import environ as env
 from datetime import datetime
@@ -13,13 +12,13 @@ from django.utils import timezone
 
 class JenkinsStatusCheckForm(forms.Form):
     max_queued_build_time = forms.IntegerField(
-	help_text = 'Alert if build queued for more than this many minutes.'
+	help_text = 'Alert if build queued for more than this many minutes.',
     )
 
 
 class JenkinsStatusCheckPlugin(StatusCheckPlugin):
     name = "Jenkins"
-    slug = "jenkins"
+    slug = "cabot_check_jenkins"
     author = "Jonathan Balls"
     version = "0.0.1"
     font_icon = "glyphicon glyphicon-ok"
