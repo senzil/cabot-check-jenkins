@@ -1,8 +1,8 @@
 from django.conf import settings
 from django.template import Context, Template
 from django import forms
-from cabot.plugins.models import StatusCheckPlugin
-from cabot.cabotapp.models import StatusCheckResult
+from cabot3.plugins.models import StatusCheckPlugin
+from cabot3.cabotapp.models import StatusCheckResult
 from os import environ as env
 from datetime import datetime
 import logging
